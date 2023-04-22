@@ -54,7 +54,7 @@
       };
       const onKeyDown = (event) => {
         switch (event.keyCode) {
-          case 37: // Left arrow
+          case 37: case 65: // Left arrow
             cube.rotation.y += 0.1;
             scene.background = new THREE.GradientBackground([
               new THREE.Color(0x00ff00),
@@ -65,7 +65,7 @@
               createGradientCanvas(0xff0000, 0x00ff00)
             );
             break;
-          case 38: // Up arrow
+          case 38: case 87: // Up arrow
             cube.rotation.x -= 0.1;
             scene.background = new THREE.GradientBackground([
               new THREE.Color(0x0000ff),
@@ -76,7 +76,7 @@
               createGradientCanvas(0x00ff00, 0x0000ff)
             );
             break;
-          case 39: // Right arrow
+          case 68: case 39: // Right arrow
             cube.rotation.y -= 0.1;
             scene.background = new THREE.GradientBackground([
               new THREE.Color(0xff00ff),
@@ -87,7 +87,7 @@
               createGradientCanvas(0x0000ff, 0xff00ff)
             );
             break;
-          case 40: //
+          case 40: case 83: // Down arrow
           cube.rotation.x += 0.1;
         scene.background = new THREE.GradientBackground([
           new THREE.Color(0xffff00),
